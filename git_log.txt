@@ -12,3 +12,15 @@
  12 git checkout = naviguer sur differente branche ou restaurer la copie de travail
  13 git remote -vv = verbaliser
  2021  history > git_log.txt
+ git lg -> visionner tout les commits et les branches
+  outil a installer en cas de non visualisation Qgit
+[alias]
+    lg = "log --graph --pretty=format:'%C(#ff0000)%h -%C(#00ffff bold)%d%Creset %C(#eeeeff)%s %C(#00dd22)(%cr) %C(bold blue)<%an>' --abbrev-commit --date=relative"
+[credential]
+    helper = cache --timeout=86400
+
+  
+ 
+ 
+ 
+ 
