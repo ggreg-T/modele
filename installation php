@@ -1,0 +1,67 @@
+DEMARRER mysql:
+sudo systemctl start mysql
+
+DEMARRER apache2
+sudo systemctl enable apache2
+
+OU :
+sudo systemctl start apache2; OU: sudo systemctl restart apache2
+
+
+CREER UN DOSSIER OU FICHIER
+
+POUR LA CREATION D'UN HOTE VIRTUELLE ENTRER LA COMMANDE:
+sudo nano /etc/apache2/sites-available/dossier ou fichier.conf
+
+
+CONFIGURATION DE L'HOTE
+
+<VirtualHost *:80>
+        ServerName dossier ou fichier
+        ServerAlias www.dossier ou fichier
+        DocumentRoot "/var/www/dossier ou fichier"
+        <Directory "/var/www/dossier ou fichier">
+                Options +FollowSymLinks +Indexes
+                AllowOverride all
+                Require all granted
+        </Directory>
+        ErrorLog /var/log/apache2/error.dossier ou fichier.log
+        CustomLog /var/log/apache2/access.dossier ou fichier.log combined
+</VirtualHost>
+
+APRES AVOIR CREER L'HOTE, L'ACTIVER EN LANÇANT apache2 AVEC LA COMMANDE :
+    sudo a2ensite dossier ou fichier
+
+PUIS FAIRE :
+sudo systemctl reload apache2  
+
+DEFINIR L'ADRESSE IP DU HOST 
+sudo nano /etc/hosts 
+
+POUR VERIFIER LA CONFIG EST BONNE APRES PLUSIEURS MANIP 
+apache2ctl configtest 
+
+SI PHPMYADMIN NE S'AFFICHE PAS:
+
+administrateur:~$ cd /var/www
+administrateur:/var/www$ sudo nano /etc/apache2/apache2.conf
+[sudo] Mot de passe de administrateur :  
+
+AJOUTER CETTE LIGNE A LA FIN DU FICHIER
+Include /etc/phpmyadmin/apache.conf
+
+OU PLUS PRECISEMMENT: Include /(chemin du dossier ou fichier phpmyadmin ou autre)/phpmyadmin/apache.conf          
+
+administrateur:/var/www$ sudo service apache2 start
+administrateur:/var/www$ sudo systemctl reload apache2 
+
+
+
+
+
+
+
+
+
+
+

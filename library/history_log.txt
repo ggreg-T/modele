@@ -1,0 +1,530 @@
+    1  mysql-server --version
+    2  sudo apt install mysql-server
+    3  sudo apt install mysql-utilities
+    4  mysql-utilities --version
+    5  $ whereis php
+    6  whereis php
+    7  whereis phpmyadmin
+    8  cd  /etc/apache2//sites-available
+    9  ls
+   10  cd ..
+   11  ls
+   12  cd ..
+   13  ls
+   14  d ~
+   15  cd ~
+   16  sudo nano /etc/hosts 
+   17  cd /etc
+   18  cd phpmyadmin/
+   19  ls
+   20  sudo cd ~
+   21  cd ~
+   22  sudo nano /etc/phpmyadmin/config.inc.php
+   23  n
+   24  sudo dpkg-reconfigure phpmyadmin
+   25  cd /var/www
+   26  sudo nano /etc/apache2/apache2.conf
+   27  sudo service apache2 start
+   28  sudo systemctl reload apache2 
+   29  sudo apache2 start
+   30  sudo systctl start apache2
+   31  sudo systemctl start apache2
+   32  sudo nano /etc/apache2/sites-available/sprint6.conf
+   33  cd  /etc/apache2//sites-available
+   34  ls
+   35  pwd
+   36  cd ~
+   37  sudo nano /etc/apache2/sites-available/000-default.conf
+   38  sudo nano /etc/apache2/sites-available/sprint6.conf
+   39  sudo nano /etc/apache2/sites-available/000-default.conf
+   40  sudo nano /etc/hosts 
+   41  sudo nano /etc/apache2/sites-available/000-default.conf
+   42  cd Bureau/
+   43  ll
+   44  cd sprint6
+   45  ls
+   46  cd sprint_06/
+   47  ls
+   48  git init
+   49  git status
+   50  git add config.php read.php
+   51  git commit -m "first commit"
+   52  git branch -M main
+   53  git remote add origin https://github.com/ggreg-T/sprint_06.git
+   54  git push -u origin main
+   55  ls
+   56  git status
+   57  git add create.php delete.php error.php header.php index.php search_ref.php update.php README.md
+   58  git commit
+   59  git push -u origin main
+   60  cd ~
+   61  ls
+   62  cd ..
+   63  ls
+   64  cd ..
+   65  ls
+   66  cd var
+   67  ls
+   68  cd www/
+   69  ls
+   70  cd ..
+   71  ls
+   72  cd ..
+   73  ls
+   74  cd home
+   75  ls
+   76  cd ggreg0/
+   77  ls
+   78  cd Bureau/
+   79  ls
+   80  cd sprint6/
+   81  ls
+   82  cd sprint_06/
+   83  ls
+   84  git status
+   85  git add -A
+   86  GIT STATUS
+   87  git status
+   88  git commit
+   89  git push
+   90  ls
+   91  git status
+   92  git add -A
+   93  git staus
+   94  git status
+   95  git commit
+   96  git push
+   97  cd Bureau/
+   98  ls
+   99  cd test\ tout/
+  100  ls
+  101  cd test test\ git\ /
+  102  cd test\ gitq
+  103  cd testgit\
+  104  cd test git\
+  105  ls
+  106  test-gith\
+  107  cd Bureau/
+  108  ls
+  109  cd test\ tout/
+  110  cd test-githgit init
+  111  cd ..
+  112  cd Memo/
+  113  cd Bureau/
+  114  cd test\ tout/
+  115  ls
+  116  cd test-gith\
+  117  ls
+  118  cd Bureau/
+  119  ls
+  120  cd test-tout/
+  121  ls
+  122  cd test-gith\ /
+  123  ls
+  124  cd Bureau/test-tout/
+  125  ls
+  126  cd test-gith/
+  127  ls
+  128  git init
+  129  git clone test-branche
+  130  git clone https://github.com/ggreg-T/test-branche.git
+  131  ls
+  132  git branch
+  133  git branch -v
+  134  git branch popy
+  135  git branch 'popy'
+  136  git branch 'popy' * main
+  137  ls
+  138  cd test-branche/
+  139  git branch 'popy'
+  140  git status
+  141  git commit
+  142  git sh
+  143  git push
+  144  git fetch
+  145  ls
+  146  git push
+  147  git pull
+  148  git push
+  149  git status
+  150  git branch jak
+  151  git checkout jak
+  152  git log
+  153  git lg
+  154  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  155  php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  156  php composer-setup.php
+  157  php -r "unlink('composer-setup.php');"
+  158  echo 
+  159  composer global require laravel/installer
+  160  echo $PATH
+  161  laravel new sprint
+  162  nano .bashrc
+  163  source ~/.bashrc
+  164  laravel new sprintt
+  165  cd sprintt
+  166  composer install
+  167  php artisan serve
+  168  nano .bashrc
+  169  cd ..
+  170  nano .bashrc
+  171  php artisan serve
+  172  cd sprintt/
+  173  php artisan serve
+  174  cd sprintt/
+  175  php artisan serve
+  176  php artisan make:migration create_produits_table --create=produits
+  177  php artisan migrate
+  178  php artisan make: controller ProduitController --resource --model=Produit
+  179  php artisan make:controller ProduitController --resource --model=Produit
+  180  php artisan serve
+  181  php artisan route:list
+  182  php artisan serve
+  183  cd ..
+  184  Composer create-project laravel/laravel blog --prefer-dist
+  185  cd sprintt/
+  186  Composer create-project laravel/laravel blog --prefer-dist
+  187  cd ..
+  188  composer create-project laravel/laravel blog --prefer-dist
+  189  php artisan make:migration create_produits_table --create=produits
+  190  cd blog
+  191  php artisan make:migration create_produits_table --create=produits
+  192  php artisan migrate
+  193  php artisan make:controller ProduitController --resource --model=Produit
+  194  php artisan serve
+  195  php artisan migrate
+  196  php artisan serve
+  197  cd blog
+  198  php artisan serve
+  199  cd ..
+  200  laravel new projett
+  201  cd projett
+  202  cd ..
+  203  laravel new blog
+  204  cd blog
+  205  php artisan serve
+  206  php artisan make:controller IndexController
+  207  cd blog
+  208  php artisan serve
+  209  cd projett/
+  210  php artisan serve
+  211  cd blog/
+  212  php artisan serve
+  213  cd blog
+  214  php artisan serve
+  215  cd projett
+  216  php artisan serve
+  217  composer require laravel/ui
+  218  cd .;
+  219  cd ..
+  220  cd blogg
+  221  composer require laravel/ui
+  222  cd projett
+  223  php artisan serve
+  224  cd ..
+  225  cd blog
+  226  php artisan serve
+  227  cd ..
+  228  cd projett
+  229  php artisan serve
+  230  cd ..
+  231  laravel new site
+  232  cd site
+  233  php artisan serve
+  234  cd ..
+  235  cd projett/
+  236  php artisan serve
+  237  cd ..
+  238  cd blog
+  239  php artisan serve
+  240  cd ..
+  241  composer create-project laravel/laravel blogg --prefer-dist
+  242  cd blogg
+  243  php artisan serve
+  244  php artisan make:migration create_produits_table --create=produits
+  245  php artisan migrate
+  246  php artisan make:controller ProduitController --resource --model=Produit
+  247  php artisan serve
+  248  cd blogg
+  249  php artisan serve
+  250  cd blogg
+  251  php artisan serve
+  252  php artisan ui bootstrap --auth
+  253  cd blogg
+  254  php artisan serve
+  255  php artisan make:migration --help
+  256  cat database/migrations/2022_04_11_110719_create_produits_table.php 
+  257  php artisan serve
+  258  php artisan migrate
+  259  php artisan serve
+  260  cd ..
+  261  laravel new site
+  262  cd site
+  263  php artisan make:migration create_comment_table
+  264  cd ..
+  265  cd blogg
+  266  php artisan migrate
+  267  php artisan serve
+  268  cd ..
+  269  cd ~
+  270  cd glob
+  271  php artisan serve
+  272  cd ..
+  273  cd forum
+  274  git init
+  275  git add README.md
+  276  git commit -m "first commit"
+  277  git remote add origin https://github.com/ggreg-T/sprint-07.git
+  278  git push -u origin main
+  279  git push -u origin main
+  280  git branch -M main
+  281  git remote add origin https://github.com/ggreg-T/sprint-07.git
+  282  git push -u origin main
+  283  git pull
+  284  git push -u origin main
+  285  git pull(1)
+  286  git pull 1
+  287  git fetch
+  288  git pull
+  289  git status
+  290  git status
+  291  git commit
+  292  git push
+  293  git checkout main
+  294  git remote add origin https://github.com/ggreg-T/sprint-07.git
+  295  git push
+  296  git push --set-upstream origin main
+  297  git pull origin main 
+  298  git push origin main
+  299  git fetch
+  300  git pull
+  301  git pull origin main 
+  302  git push --set-upstream origin main main
+  303  git push --help
+  304  git l
+  305  git lg
+  306  ls
+  307  git status
+  308  git push -m main
+  309  git push -main
+  310  git pull origin main 
+  311  cd forum
+  312  git status
+  313  ls
+  314  git status
+  315  git commit -a
+  316  git push
+  317  git pull
+  318  composer require laravel/ui
+  319  php artisan ui bootstrap
+  320  php artisan ui bootstrap --auth
+  321  php artisan serve
+  322  git staus
+  323  git status
+  324  git add show.blade.php
+  325  git add resources/views/produits/show.blade.php
+  326  git commit
+  327  git push
+  328  git push --set-upstream origin main
+  329  php artisan serve
+  330  cd ..
+  331  cd ~
+  332  cd forhum/
+  333  php artisan serve
+  334  cd ..
+  335  cd site
+  336  php artisan serve
+  337  cd site
+  338  php artisan serve
+  339  ps -ef | grep php
+  340  kill -9 12155
+  341  kill -9 15974
+  342  kill -9 17215
+  343  php artisan serve
+  344  cd ..
+  345  cd forhum/
+  346  php artisan serve
+  347  cd 
+  348  cd forhum
+  349  git status
+  350  ls
+  351  git status
+  352  git init
+  353  git add public
+  354  git commit
+  355  git remote add origin https://github.com/ggreg-T/sprint-07.git
+  356  git push
+  357  git push -u origin master
+  358  git status
+  359  ls
+  360  git commit -a
+  361  git commit -A
+  362  git add -A
+  363  git commit
+  364  git push -u origin master
+  365  php artisan serve
+  366  cd forhum/
+  367  git status
+  368  git commit -a
+  369  git push -u origin master
+  370  composer require laravel/ui
+  371  php artisan ui bootstrap --auth
+  372  php artisan serve
+  373  cd forhum
+  374  php artisan serve
+  375  cd forhum/
+  376  php artisan serve
+  377  cd ..
+  378  cd foorum
+  379  php artisan serve
+  380  composer require pusher/pusher-php-server
+  381  npm install --save laravel-echo pusher-js
+  382  sudo npm install --save laravel-echo pusher-js
+  383  composer require npm
+  384  npm install
+  385  sudo apt install npm
+  386  npm install --save laravel-echo pusher-js
+  387  php artisan make:migration create_comments_table
+  388  php artisan serve
+  389  php artisan make:migration create_comments_table
+  390  cd ..
+  391  composer create-project --prefer-dist laravel/laravel fauxrum
+  392  cd fauxrum/
+  393  php artisan serve
+  394  php artisan make:migration create_posts_table
+  395  php artisan make:migration create_comments_table
+  396  php artisan migrate
+  397  php artisan make:migration add_admin_column_to_users_table
+  398  php artisan migrate
+  399  php artisan db:seed
+  400  php artisan make:model Post
+  401  php artisan make:model Comment
+  402  composer require laravel/breeze --dev
+  403  php artisan breeze:install
+  404  npm install && npm run dev
+  405  php artisan serve
+  406  node --version
+  407  node update
+  408  npm run dev
+  409  npm install
+  410  npm fund
+  411  php artisan serve
+  412  node.js install
+  413  node version
+  414  npm run dev
+  415  php artisan serve
+  416  npm install
+  417  run npm install
+  418  Run npm install
+  419  npm install && npm run dev
+  420  npm run dev
+  421  npm install
+  422  npm fund
+  423  npm install -g node
+  424  npm install --global cross-env
+  425  cd forhum
+  426  php artisan serve
+  427  git init
+  428  git fetch 
+  429  git pull
+  430  php artisan serve
+  431  git status
+  432  git commit
+  433  git status
+  434  git pull
+  435  php artisan serve
+  436  git status
+  437  git fetch
+  438  git pull
+  439  cd ..
+  440  cd forome/
+  441  git init 
+  442  cd ..
+  443  cd forhum/
+  444  git status
+  445  git commi -a
+  446  git commit -a
+  447  git push
+  448  cd forhum/
+  449  php artisan serve
+  450  git status
+  451  php artisan serve
+  452  ls
+  453  git status
+  454  git fetch
+  455  git pull
+  456  git fetch
+  457  git pull
+  458  git branch
+  459  git log
+  460  php artisan serve
+  461  git clone
+  462  git clone sprint-07
+  463  git clone https://github.com/ggreg-T/sprint-07.git
+  464  php artisan serve
+  465  git clone 
+  466  git clone https://github.com/ggreg-T/sprint-07.git
+  467  ls
+  468  php artisan serve
+  469  git status 
+  470  git commit -a
+  471  git push
+  472  git status
+  473  git add -A
+  474  git commit
+  475  git push
+  476  git status
+  477  cd forhum/
+  478  php artisan server
+  479  php artisan serve
+  480  php artisan route:list
+  481  php artisan route:list
+  482  cd forhum/
+  483  php artisan serve
+  484  php artisan make:migration add_deleted_at_to_comment_table --table=comments
+  485  php artisan serve
+  486  php artisan route:list
+  487  php artisan serve
+  488  php artisan make:migration add_deleted_at_to_comment_table --table=comments
+  489  php artisan serve
+  490  git clone
+  491  git clone https://github.com/ggreg-T/sprint-07.git
+  492  php artisan serve
+  493  cd forhum/
+  494  php artisan serve
+  495  cd forhum/
+  496  php artisan serve
+  497  cd forhum/
+  498  php artisan serve
+  499  cd forhum/
+  500  php artisan serve
+  501  npm install
+  502  npm run dev
+  503  php artisan serve
+  504  cd forhum/
+  505  php artisan serve
+  506  git branch modifg
+  507  git checkout modifg
+  508  git status
+  509  git add -A
+  510  git commit 
+  511  git push
+  512  git push --set-upstream origin modifg
+  513  laravel --version
+  514  php --version
+  515  laravel --version
+  516  laravel new library
+  517  cd library
+  518  php artisan serve
+  519  php artisan make:con
+  520  php artisan serve
+  521  cd library
+  522  php artisan serve
+  523  cd library
+  524  php artisan serve
+  525  php artisan make:migration create_auteurs_table
+  526  php artisan migrate
+  527  php artisan make:migration create_livres_table
+  528  laravel --version
+  529  php artisan migrate
+  530  history > history_log.txt

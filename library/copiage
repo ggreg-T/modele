@@ -1,0 +1,7 @@
+<ul>
+    @foreach ($livres as $cle=> $livre) 
+    <li>
+        <a href="/livres/{{$livre->id}}">:{{$livre->titre}}: ({{$livre->auteur->nom}} , {{$livre->auteur->prenom}})</a></li>
+        @endforeach
+    </ul> 
+
