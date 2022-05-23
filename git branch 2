@@ -1,0 +1,33 @@
+
+##########  Creer une branche apres un pull request  ##################
+
+git status 
+git commit - a - m "(nom du commit)"
+
+  (apres un merge)
+
+git fetch 
+
+ -Apres le fetch creer une branche repartant du dernier commit:
+
+git checkout -b w3c-check origin/main
+
+ -Ensuite parametrer pour que la branche w3c-check local suit la branche w3c-check distante:
+
+git push -u origin w3c-check
+
+##########  Recuperer un travail qui a été push entre temps  ###########
+
+ -Apres le merge de la pull request 
+
+git fetch
+
+ -Ensuite faire 
+
+git merge origin/main
+
+
+public/images/84R57cjFms3SZgQF9AuD5Kp5BH3crRDbtoyOqe2L.jpg
+              84R57cjFms3SZgQF9AuD5Kp5BH3crRDbtoyOqe2L
+
+
