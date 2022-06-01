@@ -1,0 +1,29 @@
+
+## Pour faire un screenshot d'un site entier et non une capture d'ecran
+
+  - Faire F12
+  - puis faire ctrl + shift + p 
+  - taper screen dans la barre de recherche
+  - choisir full size screenshot
+
+
+## Pour cartographier un site :
+   - taper #id dans l'URL pour acceder directement a l'endroit
+
+## Créer un lien vers quelque chose sans id
+
+ exemple: 
+
+ https://www.keolis.com/stationnement#:~:text=Pour%20inventer%20les%20parkings%20de%20demain%20et%20les%20services%20associ%C3%A9s%20%C2%BB.
+
+    -   selectionner une phrase 
+    -   la copier après l'url précedé de # et #:~:text=
+    -   remplpacer les espaces par %20 
+    -   toutes les ponctuation ont une syntaxe particuliére
+
+
+
+
+
+
+
