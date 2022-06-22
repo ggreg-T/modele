@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Fredoka+One&family=Joan&family=Kdam+Thmor+Pro&family=Lobster&family=Montserrat:wght@200;400&family=Roboto&family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: blueviolet;
+}
+h3{
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#form{
+    position: relative;
+}
+#form #email{
+    width: 300px;
+    background: #282828;
+    padding: 10px;
+    color: aqua;
+    font-style: 18px;
+}
+#form #inputbox{
+    position: relative;
+}
+

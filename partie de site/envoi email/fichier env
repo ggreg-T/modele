@@ -1,0 +1,9 @@
+
+####Configuration avec gmail#######
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=<<your email address>>
+MAIL_PASSWORD=<<app password>>
+MAIL_ENCRYPTION=tls
