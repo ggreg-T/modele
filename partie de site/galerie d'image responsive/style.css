@@ -1,18 +1,21 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0%;
 }
-body{
+
+body {
     background: #333;
     height: 100vh;
 }
-h1{
+
+h1 {
     font-size: 60px;
     color: antiquewhite;
     text-align: center;
 }
-.galerie{
+
+.galerie {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -21,15 +24,23 @@ h1{
     margin: 70px auto 0;
     background: crimson;
 }
-.item{
+
+.item {
     width: 300px;
     height: 200px;
     margin: 10px;
+    overflow: hidden;
     /* on utilise flex-shrink pour pas que l'image rétrécisse  */
     flex-shrink: 0;
-    overflow: hidden;
+
+    /* sert à adapter l'image a une taille desirée en respectant le ratio, mais avec une fonction de rognage */
+    /* object-fit: cover; */
+
+    /* pour mettre une ombre a l'intérieur d'une image png */
+    filter: drop-shadow(0 0 5px blue);
 }
-.item img{
+
+.item img {
     width: 100%;
     height: auto;
 }
