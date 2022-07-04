@@ -31,7 +31,11 @@ composer create-project --prefer-dist laravel/laravel:^7.0 blog
     php artisan cache:clear   ou php artisan config:cache
     php artisan view:clear
 
+# pour upgrader composer :
+    composer self-update 
 
+# pour desinstaller un package :
+    composer remove (nom du package)
 
 
 
