@@ -1,0 +1,45 @@
+:root
+{
+    --background1:url("https://zupimages.net/up/22/26/vxj1.png");
+    --background2:url("https://zupimages.net/up/22/26/dkah.png");
+}
+.boutonCat2 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        color:black; 
+        background-color:#F3F2E6; 
+        font-family: "Average Sans", Sans; 
+        font-size: 20px;
+        font-weight: 900; 
+        text-align:left;
+        display: flex;
+        }
+        .icon{
+            width: 70px;
+            height: 70px;
+            background-image: var(--background1);
+            background-size: 60px 70px;
+            background-repeat: no-repeat;
+        }
+        .content
+        {
+margin-left: 10px;
+   font-family: "Questrial", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    letter-spacing: 0px;  
+        }
+
+       .boutonCat2:hover .icon{
+              width: 70px;
+            height: 70px;
+            background-image: var(--background2);
+            background-size: 60px 70px;
+            background-repeat: no-repeat;
+            }
+
+.boutonCat2:hover {
+            color:#F3F2E6; 
+            background-color:#AF4424;
+            }
