@@ -1,0 +1,33 @@
+    1  git --version
+    2  help == which ls = strings = locate =
+    3  git --version
+    4  sudo apt install git
+    5  sudo app install git
+    6  git --version
+    7  sudo apt install git
+    8  pwd == indique le chemin
+    9  ls = lister les elements d'un dossier
+   10  mkdir testdir == creer un dossier
+   11  less = regarder un ce qu'il y a dans un fichier
+   12  cd testdir == parcourir des dossier 
+   14  ls -l == affiche le nbre de dossier dans le dossier parent
+   15  touch file.txt == creer un fichier
+   16  cat file.txt ==  afficher ce que dit un fichier txt 
+   17  code file.txt == ouvrir visual code
+   18  visual studio code file.txt
+   19  nano file.txt
+   20  rm textdir = efface un fichier
+   21  history == historique
+   22  man ls == explication de fonction 
+   23  history > history_log.txt == creer un dossier repertoriant l'historique
+   24  cd .. == remonter un dossier parent
+    25 mv textdir bureau = deplacer un ficier
+    26 grep = trouver une partie precise d'un fichier 
+        exemple => grep une phrase/mot textdir
+    27 apt-get remove --purge mysql-server* php5* apache2* && apt-get autoremove= commande pour desinstaller
+
+
+
+
+
+

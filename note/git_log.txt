@@ -1,0 +1,26 @@
+ 1  git --version = voir la version de git
+ 2  git init = Créer un dépôt Git vide ou réinitialiser un existant
+ 3  git add = Ajouter le contenu de fichiers dans l'index
+ 4  gti commit = Enregistrer les modifications dans le dépôt
+ 5  git remote = gerer un enssemble de referentiel (plusieur commande possible pour remote ex: remote add, remote rename, remote rm, etc..q)
+ 6  git push = mettre sur le depot distant les mise a jour
+ 7  git pull = recuperer sur le depot distant les mise a jour
+ 8  git status = verifier l'etat des commit
+ 9  git mv = Déplacer ou renommer un fichier, un répertoire, ou un lien symbolique2000  mkdir de-pot_example
+ 10 git clone = Cloner un dépôt dans un nouveau répertoire
+ 11 git log = Afficher l'historique des validations
+ 12 git checkout = naviguer sur differente branche ou restaurer la copie de travail
+ 13 git remote -vv = verbaliser
+ 2021  history > git_log.txt
+ git lg -> visionner tout les commits et les branches
+  outil a installer en cas de non visualisation Qgit
+[alias]
+    lg = "log --graph --pretty=format:'%C(#ff0000)%h -%C(#00ffff bold)%d%Creset %C(#eeeeff)%s %C(#00dd22)(%cr) %C(bold blue)<%an>' --abbrev-commit --date=relative"
+[credential]
+    helper = cache --timeout=86400
+
+  
+ 
+ 
+ 
+ 
