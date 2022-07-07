@@ -1,0 +1,13 @@
+fieldset
+{
+  border-radius: 5px; 
+  padding: 5px; 
+  min-height:150px; 
+  border:8px solid #1f497d; 
+  background-color:#eeece1; 
+}
+legend
+{
+color:#1f497d;
+font-size:100px;
+}
