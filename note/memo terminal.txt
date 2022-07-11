@@ -11,7 +11,7 @@
    11   rm = efface un fichier
    12   history == montre l'historique du terminal
    14  man ls == explication de fonction 
-   15  history > history_log.txt == creer un dossier repertoriant l'historique
+   15  history > history_log.txt == creer un fichier repertoriant l'historique
    16  mv ( nom de fichier) (destination) = deplacer un ficier (sert aussi a renommer)
    17  grep = trouver une partie precise d'un fichier exemple => grep une phrase/mot textdir
    18  help = decrit une fonction
