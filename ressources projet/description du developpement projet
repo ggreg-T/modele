@@ -1,0 +1,36 @@
+
+hyung tae kim
+
+https://www.youtube.com/watch?v=F8iYtkBXoh4
+
+------1:30
+creer les models controller etc des post et category
+php artisan make:model postt -a 
+le -a permet de créer tous les fichier en même temps
+
+php artisan make:model category -m 
+pour n'avoir que le model et les migration
+
+------3:00
+dans les fichiers migrations de postt et de category:
+creer les champs de la bdd et les clés étrangères
+
+------8 : 27
+définir dans le dossier Model la relation one to many , un user a plusieurs post en créant la fonction: public function posts() { return $this->hasMany(Postt::class); } dans le fichier User.php
+
+------5:55
+créer la factory pour la category 
+php artisan make:factory CatFactory --model=category
+*** vérifier que le < use App\Models\category; > est bien intégré dans le factory category et 
+                    < use App\Models\postt; > dans le postt factory
+
+
+
+dans le fichier catFactory : utiliser la librairie faker dans la public function definition() {} :
+             'title'=>$this->faker->sentence(rand(5, 10)true)
+            'content'=>$this->faker->sentence(rand(5, 10)true)
+
+
+
+
+
