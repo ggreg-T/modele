@@ -21,6 +21,7 @@ définir dans le dossier Model la relation one to many , un user a plusieurs pos
 ------5:55
 créer la factory pour la category 
 php artisan make:factory CatFactory --model=category
+
 *** vérifier que le < use App\Models\category; > est bien intégré dans le factory category et 
                     < use App\Models\postt; > dans le postt factory
 
@@ -29,6 +30,16 @@ php artisan make:factory CatFactory --model=category
 dans le fichier catFactory : utiliser la librairie faker dans la public function definition() {} :
              'title'=>$this->faker->sentence(rand(5, 10)true)
             'content'=>$this->faker->sentence(rand(5, 10)true)
+8:25 8:40
+*** pour eviter des erreurs de mass assignement on peut entrer dans le fichier model/postt ceci
+
+--------  SEEDERS  ---------
+dans le fichier seeders/DataBaseSeeders entrer :
+        \App\Models\category::factory(5)->create();
+
+*** Ne pas oublier d'importer les class model 
+use App\Models\category;
+use App\Models\User;
 
 
 
