@@ -90,12 +90,14 @@ return [
 protected $guarded = []
 
 --------  SEEDERS  ---------
-dans le fichier seeders/DataBaseSeeders entrer :
-        \App\Models\category::factory(5)->create();
+dans le fichier seeder compléter la fonction run, car c'est elle qui ira chercher les champs  dans le fichier factory (une fois celle-ci complétée). 
 
-*** Ne pas oublier d'importer les class model 
-use App\Models\category;
+!!!!!!! Ne pas oublier d'importer les class model !!!!!
+use App\Models\Category;
 use App\Models\User;
+
+!!!Regarder a 10:30 pour plus de précision
+
 
 13:45
 !!!! une erreur apparait  : Class 'User' not found . c'est pck la classe user et category n'est pas importé dans le fichier de migration post, (procéder comme précedemment) puis une fois les classe importer faire un < migrate:refresh --seed > pour rafraichir et faire un seed.
