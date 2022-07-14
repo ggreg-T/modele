@@ -103,4 +103,60 @@ use App\Models\User;
 !!!! une erreur apparait  : Class 'User' not found . c'est pck la classe user et category n'est pas importé dans le fichier de migration post, (procéder comme précedemment) puis une fois les classe importer faire un < migrate:refresh --seed > pour rafraichir et faire un seed.
 
 
+-------- 15:25 INSTALLATION DE BREEZE
+utiliser la commande :
+composer require laravel/breeze --dev 
+php artisan breeze:install
+npm install 
+npm run dev
+
+-------- 17:45  CRÉATION DES ROUTES ET CONTROLEUR
+
+CRÉER LA  route du post 
+
+!!!!!! NE PAS OUBLIER D'IMPORTER LA CLASSE CONTROLLER !!!!!!!!
+Route::ressource('posts', PostController::class);
+
+ASTUCES : en faisant (php artisan route:list --name=posts) on récupère les url liées a la route posts qu'on a créée
+
+Route::ressource('posts', PostController::class)->except('index');
+
+puis faire de cette route , la page d'accueil en appellant la méthode index() du controleur et en la renommant posts.index
+
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
+
+21:30
+puis créer la view index dans le controleur et dans le dossier view.
+
+---------22:40 MODIF DE BREEZE
+Faire 2 menus différents, un quand on es connecté et l'autre non. dans le fichhier layouts/navigation.blade.php il faut modifier les setting dropdown , les balise <x-dropdown> => copier les balise <x-dropdown> afin d'en créer un pour l'auth avec les balises @auth;@endauth et pour l'invité avec @guest;@endguest.
+pour le guest on peut juste retirer le form le script js dans le x-slot name='content' et créer le register et login comme ceci :
+   <x-dropdown-link :href="route('login')"
+                                   >
+                                {{ __('SE connecter') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('register')"
+                                   >
+                                {{ __('S\'enregistrer ') }}
+                            </x-dropdown-link>
+24:15
+!!!!!!!! une erreur apparaitra car il faut faire la meme chose pour le responsive setting option, baliser avec @auth
+
+24:35 !!! il y aura une erreur par rapport au $header, il faudra le renseigner dans l'index qu'on a créé et balisé avec x-app-layout.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
