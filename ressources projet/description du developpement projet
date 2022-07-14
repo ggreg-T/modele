@@ -3,35 +3,91 @@ hyung tae kim
 
 https://www.youtube.com/watch?v=F8iYtkBXoh4
 
-------1:30
+------1:30  CRÉATION DES FICHIER MODELES CONTROLER ETC
+
 creer les models controller etc des post et category
-php artisan make:model postt -a 
+php artisan make:model "Post" -a 
 le -a permet de créer tous les fichier en même temps
 
-php artisan make:model category -m 
+php artisan make:model "Category" -m 
 pour n'avoir que le model et les migration
 
-------3:00
+------3:00 REMPLISSAGE DES FICHIERS MIGRATION ET DÉCLARATION DES CLÉS ÉTRANGÈRES
+
 dans les fichiers migrations de postt et de category:
 creer les champs de la bdd et les clés étrangères
+dans le fichier migration des posts :
+  public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('content');
+            $table->string('image');
+            $table->timestamps();
+    (pour les clés étrangères)
+            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(Category::class);
 
-------8 : 27
-définir dans le dossier Model la relation one to many , un user a plusieurs post en créant la fonction: public function posts() { return $this->hasMany(Postt::class); } dans le fichier User.php
+        });
+    }
 
-------5:55
+Et dans le fichier category : 
+  public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+
+            $table->timestamps();
+        });
+    }
+
+------8 : 27 REMPLISSAGE DES FICHIERS MODELS ET CRÉATION DES RELATION ONE TO MANY
+
+définir dans le dossier Model la relation one to many , un user a plusieurs post en créant la fonction: 
+
+dans le fichier User.php et dans le Category.php: 
+public function posts() { return $this->hasMany(Postt::class); } 
+
+a contrario dans le fichier Post.php on doit définir qu'il appartient à un user et une categories
+de cette manière 
+
+ public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+------5:55 CRÉATION DES FACTORY
+
 créer la factory pour la category 
-php artisan make:factory CatFactory --model=category
+php artisan make:factory CategoryFactory --model category
+ (pour dire qu'il appartient au model category)
 
-*** vérifier que le < use App\Models\category; > est bien intégré dans le factory category et 
-                    < use App\Models\postt; > dans le postt factory
+*** vérifier que le < use App\Models\Category; > est bien intégré dans le factory category et 
+                    < use App\Models\Post; > dans le postt factory
 
 
 
-dans le fichier catFactory : utiliser la librairie faker dans la public function definition() {} :
-             'title'=>$this->faker->sentence(rand(5, 10)true)
-            'content'=>$this->faker->sentence(rand(5, 10)true)
+dans le fichier CategoryFactory : utiliser la librairie faker dans la 
+public function definition()
+{
+return [
+            'title' =>$this->faker->sentence(rand(5, 10), true),
+            'content' =>$this->faker->sentences(5, true),
+            'image' => 'https//via.placeholder.com/500'
+
+        ];
+} 
+
 8:25 8:40
-*** pour eviter des erreurs de mass assignement on peut entrer dans le fichier model/postt ceci
+*** pour eviter des erreurs de mass assignement, on peut définir un champs protégé dans le fichier model/postt ceci
+protected $guarded = []
 
 --------  SEEDERS  ---------
 dans le fichier seeders/DataBaseSeeders entrer :
@@ -41,7 +97,8 @@ dans le fichier seeders/DataBaseSeeders entrer :
 use App\Models\category;
 use App\Models\User;
 
-
+13:45
+!!!! une erreur apparait  : Class 'User' not found . c'est pck la classe user et category n'est pas importé dans le fichier de migration post, (procéder comme précedemment) puis une fois les classe importer faire un < migrate:refresh --seed > pour rafraichir et faire un seed.
 
 
 
