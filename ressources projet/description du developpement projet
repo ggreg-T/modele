@@ -144,7 +144,13 @@ pour le guest on peut juste retirer le form le script js dans le x-slot name='co
 
 24:35 !!! il y aura une erreur par rapport au $header, il faudra le renseigner dans l'index qu'on a créé et balisé avec x-app-layout.
 
+Pour la partie implémentation voir à 24:35.
 
+------27:30 RÉCUPÉRATION DE TOUS LES POSTS 
+ 
+Dans la fonction index du controleur entrer ceci:
+    $posts = Post::all();  
+(verifier la fonction compact())
 
 
 
