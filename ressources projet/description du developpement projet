@@ -152,9 +152,21 @@ Dans la fonction index du controleur entrer ceci:
     $posts = Post::all();  
 (verifier la fonction compact())
 
+------ 27:50  création des dossier partials: pour ajouter les component comme le footer.
+
+------- 29:43 création et récupération de la date en entrant: 
+{{ $post->created_at->format('d N Y')}}
+
+------ 30:53 récupération des posts AVEC la categories: 
+au début on a récupérer uniquement tous les post avec :  $posts = Post::all();
+Maintenant on va les récupérer Avec les catégories correspondantes en rajoutant simplement :
+        $posts = Post::with('category')->get();
 
 
 
+------ 37:00 création du formulaire
+
+----- 39:20 définition du storage:link pour rendre les images public
 
 
 

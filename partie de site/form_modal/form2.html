@@ -14,35 +14,41 @@
  
  <body>
      
-    <h2>Modal Signup Form</h2>
-    <!--Step 1:Adding HTML-->
+    
+    <!--Step 1: bouton appelant la modal -->
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
  
-    <div id="id01" class="modal">
+<!-- Création de la modal -->
+   <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+
+
+        
+        <!-- Formulaire -->
         <form class="modal-content animate" action="/action_page.php">
+            @csrf
             <div class="container">
                 <label><b>Nom</b></label>
-                <input type="text" placeholder="Entrez le nom de l'objet" name="email" required>
+                <input type="text" placeholder="Entrez le nom de l'objet" name="nom" required>
  
-                <label><b>Description</b></label>
-                <input type="text" placeholder="Enter Password" name="psw" required>
-                <textarea></textarea>
+                <label><b>Description</b></label>        
+                <textarea placeholder="Décrivez l'objet"></textarea>
  
-                <label><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                <input type="checkbox"> Remember me
-                <p>Vous n'êtes pas inscrit<a href="#">Créer un compte</a>.</p>
+                <label><b>Date de création</b></label>
+                <input type="text" placeholder="Entrez la date" name="psw-repeat" required>
+               
+                <p>Vous n'êtes pas inscrit? <a href="#">Créer un compte</a>.</p>
  
                 <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                    <button type="submit" class="signupbtn">Valider</button>
                 </div>
             </div>
         </form>
     </div>
- 
-    <!--close the modal by just clicking outside of the modal-->
+    <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+    
+    <!--Fermeture de la modal en cliquant en dehors de la modal -->
     <script>
         var modal = document.getElementById('id01');
  
@@ -52,8 +58,5 @@
             }
         }
     </script>
- 
 </body>
- 
-
 </html>
