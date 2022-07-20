@@ -160,9 +160,15 @@ Dans la fonction index du controleur entrer ceci:
 ------ 30:53 récupération des posts AVEC la categories: 
 au début on a récupérer uniquement tous les post avec :  $posts = Post::all();
 Maintenant on va les récupérer Avec les catégories correspondantes en rajoutant simplement :
-        $posts = Post::with('category')->get();
+        $posts = Post::with('category')->get(); 
+c'est une méthode pour diminuer les requètes afin d'améliorer les performances. Onpeut aussi profiter pour récupérer les user en ajoutant:   
+$posts = Post::with('category', 'user')->get();
 
+importer le str dans le model: 
+use Illuminate\Support\Str;
 
+ensuite raccourcir la description en faisant :
+{{ Str::limit($post->description, 50)}}
 
 ------ 37:00 création du formulaire
 
