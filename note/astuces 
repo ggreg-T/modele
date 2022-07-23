@@ -1,6 +1,7 @@
 
 ## commande pour creer un un dossier laravel avec composer:
-composer create-project --prefer-dist laravel/laravel:^7.0 blog
+composer create-project --prefer-dist laravel/laravel:^7.0 blog    ou 
+composer create-project laravel/laravel example
  
 ## php artisan make:model (nom_model) -a
 cette commande permet de creer le model, le factory , la migration, le seeder et le controller d'un  coup

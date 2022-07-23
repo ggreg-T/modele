@@ -1,5 +1,9 @@
 
-hyung tae kim
+ ANNEXES : 
+ajouter un lien images :  
+<img src="{{ URL::asset('/image/k77.jpg') }}" class="cardimg" alt="...">
+
+
 
 https://www.youtube.com/watch?v=F8iYtkBXoh4
 
@@ -9,7 +13,7 @@ creer les models controller etc des post et category
 php artisan make:model "Post" -a 
 le -a permet de créer tous les fichier en même temps
 
-php artisan make:model "Category" -m 
+php artisan make:model "Post" -a 
 pour n'avoir que le model et les migration
 
 ------3:00 REMPLISSAGE DES FICHIERS MIGRATION ET DÉCLARATION DES CLÉS ÉTRANGÈRES
@@ -21,8 +25,8 @@ dans le fichier migration des posts :
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content');
+            $table->string('nom_objet');
+            $table->text('description');
             $table->string('image');
             $table->timestamps();
     (pour les clés étrangères)
@@ -48,7 +52,10 @@ Et dans le fichier category :
 définir dans le dossier Model la relation one to many , un user a plusieurs post en créant la fonction: 
 
 dans le fichier User.php et dans le Category.php: 
-public function posts() { return $this->hasMany(Postt::class); } 
+public function posts() 
+    { 
+        return $this->hasMany(Postt::class); 
+    } 
 
 a contrario dans le fichier Post.php on doit définir qu'il appartient à un user et une categories
 de cette manière 
@@ -170,12 +177,124 @@ use Illuminate\Support\Str;
 ensuite raccourcir la description en faisant :
 {{ Str::limit($post->description, 50)}}
 
+------ 35:18 englober toutues les routes avec une methode middleware pour empecher aux user d'avoir accés aux route create etc
+
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/', [PostController::class, 'index'])->name('posts.index');
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+});
+
+------- 36:00 création e la fonction create dans le controller qui fait juste un return view de la page create qu'on va développer: 
+ return view('post.create');
+
 ------ 37:00 création du formulaire
+
+----- 38:40 dans le fichier .env régler le file system a public qui est réglé de base sur local, pour que puisse voir les images dans le dossier public et faire : 
+php artisan storage:link
+
+
 
 ----- 39:20 définition du storage:link pour rendre les images public
 
+------ 40:10 ajout d'un bouton pour accéder au formulaire, repris dans les component breeze
+
+-----42:17  dans la fonction create:
+    { 
+        $categories = Category::all();
+        return view('post.create', compact('categories'));
+    }
+
+------- 45:14 dans le fichier StorePostRequest request passer la fonction a true => ce fichier storepostrequest est créé en entrant la commande suivante : 
+php artisan make:request StorePostRequest
+pour ne pas surcharger d'information la fonction store
+
+ne pas oublier d'importer 
+
+use App\Http\Requests\StorePostRequest;
+use Illuminate\Http\Request;
 
 
+!!!! les fichier susmentionnés etait deja présent contrairement à la video
+
+------- 46.15 Possibilité de faire un test avec :
+ 
+<div class="my-5">
+    @foreach ($errors->all() as $error)
+        <span class="block text-red-500" ></span>
+    @endforeach
+
+</div>
+ 
+ne fonctionne pas, à retravailler !!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!! note: les posts créés sont stockés dans le storage
+
+-----  48.15 explication de la gestion image 
+
+------ 48.42 VERIFIER LE POST MODEL !!!!!!!!!!!!!!!!!!!!!!!!!! 
+
+----- 48.59 explication du self created
+
+------- 49.25 explic. associate();
+
+------- 51.25 ajouter un latest() dans le postcontroller pour récupérer a chaque fois les derniers
+
+----- 52.00 création du fichier blade show
+dans la fonction show du postcontroller faire:
+        return view('post.show', compact('post'));
+et création du lien via le bouton bootstrap avec :
+
+  <a href="{{ route('posts.show', $post)}}" class="btn btn-primary">Go somewhere</a>
+
+
+------ 53.45 explication de la récupération du storage
+
+-----54.45 affichage des post sur la dashboard
+php artisan make:controller dashController
+
+changer la route du dashboard qui est comme ceci :
+
+  Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+  Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('dashboard');
+
+!!! ne pas oublier la classe : use App\Http\Controllers\dashController;
+
+------ 56.26 edition des lien editer et supprimer dans le dashboard
+
+------- 57.35 edition du post controller
+
+------  57.40 création et edition du fichier edit.blade.php
+ les methode de maj sont en méthode PUT
+
+------- 59.25 edition fonction edit du postcontroller
+
+------ 1.00.05 edition du update du post controller
+
+------- 1.00.43 méthode spéciale pour l'image
+
+------- 1.02.43 création de la fonction de validation de l'image
+ 
+-------
+!!!! array_merge => fonctionnalité native de php pour fusionner les tableau
+-------
+------- 1.07.30 utilisation de gate pour la sécurité
+-------
+
+
+
+
+
+ 
+------ 1:10:16 supression 
 
 
 

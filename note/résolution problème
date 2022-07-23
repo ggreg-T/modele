@@ -1,0 +1,4 @@
+ Réglage d'erreur
+
+pour l'erreur user_id n'a pas de valeur error 1364: 
+ j'ai éffacé, dans la bdd phpmyadmin, dans l'onglet variable-> sql mode -> faire éditer et effacer STRICT_TRANS_TABLES, -> save
