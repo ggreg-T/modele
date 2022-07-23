@@ -10,10 +10,11 @@ https://www.youtube.com/watch?v=F8iYtkBXoh4
 ------1:30  CRÉATION DES FICHIER MODELES CONTROLER ETC
 
 creer les models controller etc des post et category
+
 php artisan make:model "Post" -a 
 le -a permet de créer tous les fichier en même temps
 
-php artisan make:model "Post" -a 
+php artisan make:model "Categoty" -m 
 pour n'avoir que le model et les migration
 
 ------3:00 REMPLISSAGE DES FICHIERS MIGRATION ET DÉCLARATION DES CLÉS ÉTRANGÈRES
@@ -166,6 +167,7 @@ Dans la fonction index du controleur entrer ceci:
 
 ------ 30:53 récupération des posts AVEC la categories: 
 au début on a récupérer uniquement tous les post avec :  $posts = Post::all();
+
 Maintenant on va les récupérer Avec les catégories correspondantes en rajoutant simplement :
         $posts = Post::with('category')->get(); 
 c'est une méthode pour diminuer les requètes afin d'améliorer les performances. Onpeut aussi profiter pour récupérer les user en ajoutant:   
