@@ -1,0 +1,44 @@
+dashboard origin:
+
+@extends('layouts.main')
+@section('content')
+
+
+
+   <!-- Début sidebar  -->
+   <section class="body">
+                    <input type="checkbox" id="check">
+                    <label for="check">
+                        <i class="fas fa-bars" id="btn"></i>
+                        <i class="fas fa-times" id="cancel"></i>
+                    </label>
+
+                    <div class="sidebar">
+                        <header>Objet d'une époque</header>
+                        <ul>
+                            <li><a href="#">Visiter</a></li>
+                            <li><a href="#">Audit</a></li>
+                            <li><a href="#">Se connecter</a></li>
+                            <li><a href="#">S'enregistrer</a></li>   
+                        </ul>
+                    </div>
+                </section>
+                <!-- Fin sidebar -->
+<x-app-layout>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+
+                <div class="p-6 bg-white border-b border-gray-200">
+                    You're logged in!
+                    <a href="{{ route('posts.index') }}">tu peux faire voir</a>
+                </div>
+
+             
+             
+            </div>
+        </div>
+    </div>
+</x-app-layout>
