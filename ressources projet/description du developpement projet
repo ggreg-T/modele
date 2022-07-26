@@ -14,7 +14,7 @@ creer les models controller etc des post et category
 php artisan make:model "Post" -a 
 le -a permet de créer tous les fichier en même temps
 
-php artisan make:model "Categoty" -m 
+php artisan make:model "Category" -m 
 pour n'avoir que le model et les migration
 
 ------3:00 REMPLISSAGE DES FICHIERS MIGRATION ET DÉCLARATION DES CLÉS ÉTRANGÈRES
