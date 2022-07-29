@@ -6,8 +6,9 @@
 }
 
 body {
-    background: url("https://images.unsplash.com/photo-1651241990126-eff7ef63d4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80") no-repeat;
+    background: url("https://images.unsplash.com/photo-1520916784675-1b97f1fc1c05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHVucmVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60") no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -29,7 +30,7 @@ body {
     user-select: none;
 }
 
-.sidebar ul a {
+.sidebar .uli .asid {
     display: block;
     height: 100%;
     width: 100%;
@@ -44,28 +45,28 @@ body {
 }
 
 
-ul li:hover a {
+.uli .liste:hover .asid {
     padding-left: 50px;
     background-color: olivedrab;
 }
 
-.sidebar ul a i {
+.sidebar .uli .asid .liste {
     margin-right: 16px;
 }
 
-#check {
+#tcheck {
     display: none;
 }
 
-label #btn,
-label #cancel {
+label #petitbtn,
+label #retour {
     position: absolute;
     cursor: pointer;
     background: #042331;
     border-radius: 3px;
 }
 
-label #btn {
+label #petitbtn {
    
     left: 40px;
     top: 25px;
@@ -74,7 +75,7 @@ label #btn {
     padding: 6px 12px;
     transition: all .5s;
 }
-label #cancel {
+label #retour {
     z-index: 1111;
     left: -195px;
     top: 17px;
@@ -82,30 +83,32 @@ label #cancel {
     color:#0a5275;
     padding: 4px 9px;
 }
-#check:checked ~ .sidebar{
+#tcheck:checked ~ .sidebar{
     left: 0;
 } 
-#check:checked ~ label #btn{
+#tcheck:checked ~ label #petitbtn{
     left: 250px;
     opacity: 0;
     pointer-events: none;
 
 }
-#check:checked ~ label #cancel{
+#tcheck:checked ~ label #retour{
     left: 195px;
     transition: all .5s ease;
 
 }
-#check:checked ~ section{
+#tcheck:checked ~ .imgresponsive{
     margin-left: 200px;
 }
-section{
+.imgresponsive{
 
-    background: url(https://images.unsplash.com/photo-1651241990126-eff7ef63d4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80) no-repeat;
+    background: url(https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     height: 100vh;
     transition: all .5s;
+    padding: 70px;
+    margin: 70px;
 }
 /* .logo_en-tete{
     width: 100%;

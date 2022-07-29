@@ -40,7 +40,7 @@ h1 {
     filter: drop-shadow(0 0 5px blue);
 }
 
-.item img {
+.item .gal {
     width: 100%;
     height: auto;
 }
